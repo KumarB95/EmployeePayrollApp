@@ -1,4 +1,5 @@
 package com.bridgelabz.employeepayrollapp.dto;
+
 public class EmployeePayrollDTO {
 
     public int employeeId;

@@ -1,5 +1,6 @@
 package com.bridgelabz.employeepayrollapp.model;
 
+
 import com.bridgelabz.employeepayrollapp.dto.EmployeePayrollDTO;
 
 import javax.persistence.Column;
