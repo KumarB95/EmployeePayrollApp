@@ -1,0 +1,5 @@
+2021-12-17 20:58:33.846  INFO 2984 --- [restartedMain] c.b.e.EmployeePayRollAppApplication      : Starting EmployeePayRollAppApplication using Java 17.0.1 on DESKTOP-9HUN574 with PID 2984 (G:\study\Bridgelabz -064\EmployeePayrollAppv1.1\Employee_payroll_App_Sprin_Boot\target\classes started by Shree in G:\study\Bridgelabz -064\EmployeePayrollAppv1.1\Employee_payroll_App_Sprin_Boot)
+2021-12-17 20:58:33.848 DEBUG 2984 --- [restartedMain] c.b.e.EmployeePayRollAppApplication      : Running with Spring Boot v2.6.1, Spring v5.3.13
+2021-12-17 20:58:33.849  INFO 2984 --- [restartedMain] c.b.e.EmployeePayRollAppApplication      : No active profile set, falling back to default profiles: default
+2021-12-17 20:58:36.528  WARN 2984 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2021-12-17 20:58:36.836  INFO 2984 --- [restartedMain] c.b.e.EmployeePayRollAppApplication      : Started EmployeePayRollAppApplication in 3.38 seconds (JVM running for 4.211)
