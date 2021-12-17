@@ -20,6 +20,8 @@ public class EmployeePayrollData {
 
     @Column(name = "salary")
     private long salary;
+
+
     public EmployeePayrollData(int employeeId, String name, long salary) {
         this.employeeId = employeeId;
         this.name = name;
