@@ -18,3 +18,11 @@
 2021-12-17 21:34:06.429  INFO 3360 --- [restartedMain] c.b.e.EmployeePayRollAppApplication      : No active profile set, falling back to default profiles: default
 2021-12-17 21:34:09.599  WARN 3360 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
 2021-12-17 21:34:09.989  INFO 3360 --- [restartedMain] c.b.e.EmployeePayRollAppApplication      : Started EmployeePayRollAppApplication in 4.141 seconds (JVM running for 5.051)
+2021-12-17 21:59:26.686  INFO 14520 --- [restartedMain] c.b.e.EmployeePayRollAppApplication      : Starting EmployeePayRollAppApplication using Java 17.0.1 on DESKTOP-9HUN574 with PID 14520 (G:\study\Bridgelabz -064\EmployeePayrollAppv1.1\Employee_payroll_App_Sprin_Boot\target\classes started by Shree in G:\study\Bridgelabz -064\EmployeePayrollAppv1.1\Employee_payroll_App_Sprin_Boot)
+2021-12-17 21:59:26.689 DEBUG 14520 --- [restartedMain] c.b.e.EmployeePayRollAppApplication      : Running with Spring Boot v2.6.1, Spring v5.3.13
+2021-12-17 21:59:26.689  INFO 14520 --- [restartedMain] c.b.e.EmployeePayRollAppApplication      : The following profiles are active: dev
+2021-12-17 21:59:29.522  WARN 14520 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2021-12-17 21:59:29.841  INFO 14520 --- [restartedMain] c.b.e.EmployeePayRollAppApplication      : Started EmployeePayRollAppApplication in 3.638 seconds (JVM running for 4.6)
+2021-12-17 21:59:29.844  INFO 14520 --- [restartedMain] c.b.e.EmployeePayRollAppApplication      : Employee Payroll App Started in DEV Environment
+2021-12-17 21:59:29.845  INFO 14520 --- [restartedMain] c.b.e.EmployeePayRollAppApplication      : Employee Payroll DB User is root
+2021-12-17 21:59:29.845  INFO 14520 --- [restartedMain] c.b.e.EmployeePayRollAppApplication      : Test message of Slf4j
