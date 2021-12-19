@@ -18,7 +18,6 @@ import java.util.List;
 @RestController
 @RequestMapping("/employeePayrollservice")
 public class EmployeePayrollController {
-
     @Autowired
     private IEmployeePayrollService employeePayrollService;
 
@@ -29,7 +28,6 @@ public class EmployeePayrollController {
         ResponseDTO respDTO = new ResponseDTO("Get Call Success", empDataList);
         return new ResponseEntity<ResponseDTO>(respDTO, HttpStatus.OK);
     }
-
 
 
     @GetMapping("/get/{empId}")
@@ -43,7 +41,7 @@ public class EmployeePayrollController {
     @PostMapping("/create")
     public ResponseEntity<ResponseDTO> addEmployeePayrollData(
             @Valid @RequestBody EmployeePayrollDTO empPayrollDTO) {
-        log.debug("Employee DTO"+empPayrollDTO.toString());
+        log.debug("Employee DTO" + empPayrollDTO.toString());
         EmployeePayrollData empData = null;
         empData = employeePayrollService.createEmployeePayrollData(empPayrollDTO);
         ResponseDTO respDTO = new ResponseDTO("Create Employee PayrollData:", empData);
@@ -65,5 +63,14 @@ public class EmployeePayrollController {
         employeePayrollService.deleteEmployeePayrollData(empId);
         ResponseDTO respDTO = new ResponseDTO("Deleted Successful,Deleted Id:", empId);
         return new ResponseEntity<ResponseDTO>(respDTO, HttpStatus.OK);
+    }
+
+    @GetMapping("/department/{department}")
+    public ResponseEntity<ResponseDTO> getEmployeeByDepartment(@PathVariable String department) {
+
+        List<EmployeePayrollData> employeeList = null;
+        employeeList = employeePayrollService.getEmployeesPayrollDataByDepartment(department);
+        ResponseDTO response = new ResponseDTO("Get Call for Department Successful", employeeList);
+        return new ResponseEntity<ResponseDTO>(response, HttpStatus.OK);
     }
 }
