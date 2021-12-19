@@ -1,36 +1,28 @@
 package com.bridgelabz.employeepayrollapp.dto;
 
 import lombok.Data;
+import lombok.ToString;
+
+import javax.validation.constraints.Min;
+import javax.validation.constraints.NotEmpty;
 
 @Data
-public class EmployeePayrollDTO {
+public @ToString class  EmployeePayrollDTO {
 
-    public int employeeId;
+    // @Pattern(regexp = "^[A-Z]{1}[a-zA-Z\\s]{2,}$", message = "Employee Name is invalid")
+    @NotEmpty(message = "Employee Name can't be null")
     public String name;
+
+    @Min(value = 500, message = "Min Wage should be more than 500")
     public long salary;
 
+    public EmployeePayrollDTO(String name, long salary) {
+        this.name = name;
+        this.salary = salary;
+    }
 
-//    public int getEmployeeId() {
-//        return employeeId;
-//    }
-//
-//    public void setEmployeeId(int employeeId) {
-//        this.employeeId = employeeId;
-//    }
-//
-//    public String getName() {
-//        return name;
-//    }
-//
-//    public void setName(String name) {
-//        this.name = name;
-//    }
-//
-//    public long getSalary() {
-//        return salary;
-//    }
-//
-//    public void setSalary(long salary) {
-//        this.salary = salary;
-//    }
+    @Override
+    public String toString() {
+        return "Name=" + name + " Salary=" + salary;
+    }
 }

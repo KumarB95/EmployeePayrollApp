@@ -2,8 +2,6 @@ package com.bridgelabz.employeepayrollapp.services;
 
 import com.bridgelabz.employeepayrollapp.dto.EmployeePayrollDTO;
 import com.bridgelabz.employeepayrollapp.model.EmployeePayrollData;
-import com.bridgelabz.employeepayrollapp.repository.EmployeeRepository;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
@@ -13,13 +11,9 @@ import java.util.List;
 public class EmployeePayrollServices implements IEmployeePayrollService{
 
     private List<EmployeePayrollData> employeePayrollList = new ArrayList<>();
-
-    @Autowired
-    EmployeeRepository employeeRepository;
-
-
     @Override
     public List<EmployeePayrollData> getEmployeePayrollData() {
+
         return employeePayrollList;
     }
 
@@ -31,13 +25,9 @@ public class EmployeePayrollServices implements IEmployeePayrollService{
     @Override
     public EmployeePayrollData createEmployeePayrollData(EmployeePayrollDTO empPayrollDTO) {
         EmployeePayrollData empData = null;
-        EmployeePayrollData employeePayrollData= new EmployeePayrollData();
-        employeePayrollData.setEmployeeId(empPayrollDTO.getEmployeeId());
-        employeePayrollData.setName(empPayrollDTO.getName());
-        employeePayrollData.setSalary(empPayrollDTO.getSalary());
-        employeePayrollList.add(employeePayrollData);
-        employeeRepository.save(employeePayrollData);
-        return employeePayrollData;
+        empData = new EmployeePayrollData(employeePayrollList.size()+1,empPayrollDTO);
+        employeePayrollList.add(empData);
+        return empData;
     }
 
     @Override
