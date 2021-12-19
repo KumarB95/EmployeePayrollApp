@@ -8,10 +8,10 @@ public class EmployeePayrollData {
     private String name;
     private long salary;
 
-    public EmployeePayrollData(int i, EmployeePayrollDTO empPayrollDTO) {
+    public EmployeePayrollData() {
     }
 
-    public EmployeePayrollData(int employeeId, String name, long salary) {
+    public EmployeePayrollData(int i, EmployeePayrollDTO empPayrollDTO) {
         this.employeeId = employeeId;
         this.name = name;
         this.salary = salary;
